@@ -6,6 +6,9 @@ This repository demonstrates a flexible approach to module federation, moving be
 
 The core principle centers on `app-1` serving as the primary application. However, `app-2` can consume modules exposed by `app-1`, and vice-versa. This design significantly reduces code duplication and streamlines development workflows.
 
+![image](https://github.com/user-attachments/assets/8ab00401-2685-4cbc-9d5a-f4ec7f2371e4)
+
+
 ## Setup and Usage
 
 ### Development Environment
