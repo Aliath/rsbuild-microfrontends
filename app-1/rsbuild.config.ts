@@ -43,7 +43,11 @@ export default defineConfig((config) => {
           './shared': './src/shared/index.ts',
         },
         remotes: {
-          '@app2': `app2@${path.resolve(BASE_URL, './app-2/remoteEntry.js')}`,
+          '@app2': `app2@${
+            config.env === 'development'
+              ? 'http://localhost:3001/remoteEntry.js'
+              : path.resolve(BASE_URL, './app-2/remoteEntry.js')
+          }`,
         },
         getPublicPath: "return './'",
         shared: {

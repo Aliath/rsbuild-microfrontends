@@ -1,2 +1,1 @@
-export * from '@/components/component-a';
-export * from '@/components/fieldset';
+export * from '@/components/button';

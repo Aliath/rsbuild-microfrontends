@@ -25,7 +25,10 @@ export default defineConfig((config) => {
     },
     output: {
       distPath: {
-        root: path.resolve(__dirname, '../app-1/dist/app-2'),
+        root:
+          config.env === 'development'
+            ? undefined
+            : path.resolve(__dirname, '../app-1/dist/app-2'),
       },
       cleanDistPath: true,
       minify: false,
@@ -43,12 +46,17 @@ export default defineConfig((config) => {
           },
         },
         exposes: {
-          './shared-app': './src/shared-app.tsx',
+          './counter': './src/counter.tsx',
         },
         remotes: {
-          '@app1': `app1@${path.resolve(BASE_URL, './remoteEntry.js')}`,
+          '@app1': `app1@${
+            config.env === 'development'
+              ? 'http://localhost:3000/remoteEntry.js'
+              : path.resolve(BASE_URL, './remoteEntry.js')
+          }`,
         },
-        getPublicPath: "return './app-2/'",
+        getPublicPath:
+          config.env === 'development' ? undefined : "return './app-2/'",
         shared: {
           react: { singleton: true, requiredVersion: '^18.3.1' },
           'react-dom': { singleton: true, requiredVersion: '^18.3.1' },

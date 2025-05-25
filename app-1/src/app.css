@@ -11,16 +11,8 @@ body,
 body {
   font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
     "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #0e0e10;
-  background-image: radial-gradient(
-      circle at 30% 40%,
-      rgba(128, 90, 213, 0.15),
-      transparent 60%
-    ),
-    radial-gradient(circle at 70% 60%, rgba(147, 51, 234, 0.1), transparent 60%),
-    linear-gradient(180deg, #1a1a1a 0%, #0e0e10 100%);
-  background-blend-mode: screen;
-  font-size: 14px;
+  background: rgb(17 24 39 / 1);
+  font-size: 13px;
   margin: 0;
   padding: 24px;
   line-height: 1.5;
@@ -30,40 +22,180 @@ body {
   display: flex;
   flex-direction: column;
   color: #e0e0e0;
-  max-width: 760px;
+  max-width: 980px;
   margin: 0 auto;
   align-items: center;
-  padding-top: 64px;
+  padding: 64px 0;
+  gap: 24px;
 }
 
-.text-gradient {
+.header {
+  text-align: center;
+}
+
+.title {
   font-weight: 600;
-  font-size: 36px;
+  font-size: 42px;
   align-self: center;
-  margin-bottom: 72px;
+  margin-bottom: 4px;
 }
 
-fieldset {
-  border: 2px dashed transparent;
-  border-radius: 4px;
-  width: 100%;
-  padding: 20px;
+.subtitle {
+  color: rgb(156 163 175 / 1);
+  font-weight: normal;
+  font-size: 0.9rem;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.block {
+  padding: 0.75rem;
+  background-color: rgb(31 41 55 / 1);
+  border: 1px solid;
+  border-color: var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
+  flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
 }
 
-legend {
-  border: 0;
-  padding: 0 10px;
+.block--purple {
+  --border-color: rgb(168 85 247 / 1);
+  --background-color: 147, 51, 234;
+  --dark-background-color: rgb(107 33 168 / 1);
+}
+
+.block--blue {
+  --border-color: rgb(59 130 246 / 1);
+  --background-color: 29, 78, 216;
+  --dark-background-color: rgb(30 64 175 / 1);
+}
+
+.block__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 0.8rem;
 }
 
-fieldset.purple {
-  border-color: #9333ea;
+.block__label {
+  background-color: rgb(var(--background-color));
+  border-radius: 9999px;
+  color: #fff;
+  padding: 0 0.5rem;
+  font-size: 0.66rem;
+  font-weight: normal;
 }
 
-fieldset.yellow {
-  border-color: #f59e0b;
+.block__content {
+  border-radius: 0.325rem;
+  border: 1px solid;
+  border-color: rgb(var(--background-color));
+  padding: 0.5rem;
+  background-color: rgba(var(--background-color), 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.block__container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.block__content-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+
+.block__content-label {
+  border-radius: 0.25rem;
+  background-color: var(--dark-background-color);
+  padding: 0.16rem 0.33rem;
+  font-size: 0.6rem;
+}
+
+.block__content-body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(31 41 55 / 1);
+  border: 1px solid rgb(51, 59, 69);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+
+  @media screen and (min-width: 980px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.delimiter {
+  --size: 20px;
+
+  width: var(--size);
+  min-width: var(--size);
+  align-self: center;
+  transform: rotate(90deg);
+  color: #808080;
+
+  @media screen and (min-width: 980px) {
+    transform: none;
+  }
+}
+
+.button {
+  background-color: #8d3ddf;
+  border: 0;
+  border-radius: 0.25rem;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05), 0 0 0 3px transparent;
+}
+
+.button:hover {
+  background-color: #7b2bc9;
+}
+
+.button:active {
+  transform: translate(0, 1px);
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.counter__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.counter__subtitle {
+  font-size: 0.7rem;
+  color: #ababab;
 }
