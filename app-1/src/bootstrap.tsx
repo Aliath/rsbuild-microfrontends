@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
 // biome-ignore lint/style/useNamingConvention: _
-import ReactDOM from "react-dom/client";
-// biome-ignore lint/correctness/useImportExtensions: _
+import ReactDOM from 'react-dom/client';
 
 const App = React.lazy(() =>
-  import("./app").then(({ App }) => ({ default: App }))
+  import('./app').then(({ App }) => ({ default: App })),
 );
 
-const rootEl = document.getElementById("root");
+const rootEl = document.getElementById('root');
 if (rootEl) {
   const root = ReactDOM.createRoot(rootEl);
   root.render(
@@ -15,6 +14,6 @@ if (rootEl) {
       <React.Suspense>
         <App />
       </React.Suspense>
-    </React.StrictMode>
+    </React.StrictMode>,
   );
 }

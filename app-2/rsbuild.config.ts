@@ -6,7 +6,6 @@ import { pluginReact } from '@rsbuild/plugin-react';
 
 const BASE_URL = process.env.BASE_URL ?? '/';
 
-
 // biome-ignore lint/style/noDefaultExport: rsbuild enforces that
 export default defineConfig((config) => {
   return {

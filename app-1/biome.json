@@ -34,7 +34,8 @@
         "noReExportAll": "off"
       },
       "correctness": {
-        "noUndeclaredDependencies": "off"
+        "noUndeclaredDependencies": "off",
+        "useImportExtensions": "off"
       }
     }
   }

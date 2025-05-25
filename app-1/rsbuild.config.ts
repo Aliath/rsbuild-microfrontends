@@ -1,7 +1,8 @@
+// biome-ignore lint/correctness/noNodejsModules: it's a node.js module
+import path from 'node:path';
 import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 import { type RsbuildConfig, defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
-import path from 'node:path'
 
 const BASE_URL = process.env.BASE_URL ?? '/';
 
@@ -11,7 +12,7 @@ export default defineConfig((config) => {
     mode: config.env === 'production' ? 'production' : 'development',
     server: {
       port: 3000,
-      base: BASE_URL
+      base: BASE_URL,
     },
     dev: {
       writeToDisk: true,
