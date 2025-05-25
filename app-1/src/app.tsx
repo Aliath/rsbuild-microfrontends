@@ -1,6 +1,6 @@
-import { Fieldset } from "@/components/fieldset";
-import { SharedApp } from "@app2/shared-app";
-import "./app.css";
+import { Fieldset } from '@/components/fieldset';
+import { SharedApp } from '@app2/shared-app';
+import './app.css';
 
 export const App = () => {
   return (

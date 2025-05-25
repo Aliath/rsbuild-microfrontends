@@ -1,4 +1,4 @@
-import { ComponentA, Fieldset } from "@app1/shared";
+import { ComponentA, Fieldset } from '@app1/shared';
 
 export const SharedApp = () => {
   return (

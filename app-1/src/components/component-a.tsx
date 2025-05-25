@@ -1,4 +1,5 @@
-import { Fieldset } from "./fieldset";
+import { Fieldset } from '@/components/fieldset';
+import type React from 'react';
 
 export const ComponentA = ({ children }: { children: React.ReactNode }) => {
   return (

@@ -1,14 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { SharedApp } from "./shared-app";
+import React from 'react';
+import reactDom from 'react-dom/client';
+import { SharedApp } from './shared-app.tsx';
 
-const rootEl = document.getElementById("root");
+const rootEl = document.getElementById('root');
 
 if (rootEl) {
-  const root = ReactDOM.createRoot(rootEl);
+  const root = reactDom.createRoot(rootEl);
   root.render(
     <React.StrictMode>
       <SharedApp />
-    </React.StrictMode>
+    </React.StrictMode>,
   );
 }

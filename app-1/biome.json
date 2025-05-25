@@ -26,7 +26,15 @@
     "rules": {
       "all": true,
       "suspicious": {
-        "noConsole": "warn"
+        "noConsole": "warn",
+        "noReactSpecificProps": "off"
+      },
+      "performance": {
+        "noBarrelFile": "off",
+        "noReExportAll": "off"
+      },
+      "correctness": {
+        "noUndeclaredDependencies": "off"
       }
     }
   }

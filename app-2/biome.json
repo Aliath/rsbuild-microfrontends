@@ -24,7 +24,18 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "all": true
+      "all": true,
+      "suspicious": {
+        "noConsole": "warn",
+        "noReactSpecificProps": "off"
+      },
+      "performance": {
+        "noBarrelFile": "off",
+        "noReExportAll": "off"
+      },
+      "correctness": {
+        "noUndeclaredDependencies": "off"
+      }
     }
   }
 }

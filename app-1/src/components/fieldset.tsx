@@ -1,3 +1,5 @@
+import type React from 'react';
+
 export const Fieldset = ({
   children,
   title,
@@ -5,7 +7,7 @@ export const Fieldset = ({
 }: {
   children: React.ReactNode;
   title: React.ReactNode;
-  color: "purple" | "yellow";
+  color: 'purple' | 'yellow';
 }) => {
   return (
     <fieldset className={color}>

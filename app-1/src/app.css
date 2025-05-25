@@ -1,4 +1,6 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
@@ -7,10 +9,14 @@ html, body, #root {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #0e0e10;
-  background-image: 
-    radial-gradient(circle at 30% 40%, rgba(128, 90, 213, 0.15), transparent 60%),
+  background-image: radial-gradient(
+      circle at 30% 40%,
+      rgba(128, 90, 213, 0.15),
+      transparent 60%
+    ),
     radial-gradient(circle at 70% 60%, rgba(147, 51, 234, 0.1), transparent 60%),
     linear-gradient(180deg, #1a1a1a 0%, #0e0e10 100%);
   background-blend-mode: screen;
@@ -21,7 +27,7 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  color: #E0E0E0;
+  color: #e0e0e0;
   max-width: 760px;
   margin: 0 auto;
   align-items: center;
