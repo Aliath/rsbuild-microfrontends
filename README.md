@@ -8,6 +8,10 @@ The core principle centers on `app-1` serving as the primary application. Howeve
 
 ![image](https://github.com/user-attachments/assets/8ab00401-2685-4cbc-9d5a-f4ec7f2371e4)
 
+And surprise, surprise: the type definitions are created automagically!
+![CleanShot 2025-05-25 at 18 46 29@2x](https://github.com/user-attachments/assets/cea021e7-fdac-4559-abe9-02122e1cbf2d)
+
+
 
 ## Setup and Usage
 
